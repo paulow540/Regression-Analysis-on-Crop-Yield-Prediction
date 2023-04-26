@@ -79,16 +79,21 @@
         <div class="jumbotron">
             <div class="container">
                 <h3 class="display-5">Crop-Yield-Prediction</h3>
-                <p>Crop yield prediction remains one of the most challenging tasks in agriculture as it affects decision
-                    making at global, regional, and field levels. The prediction of crop yield is based on several
-                    factors such as soil, meteorological, environmental, and crop parameters. Due to the colossal effect
-                    agriculture has on the economy of the country, data-driven prediction models need to be developed.
-                    Against this background, machine learning (ML) models were engineered after processing agricultural
-                    data and Regression models were deployed to predict the yield.
+                <p>This project is established towards the fulfilment of my masters degree at the university of
+                    Sunderland on a course titled data science product development(CETM46). It is an agricultural data
+                    science products that entails the design, development, and management process used in “crop yield
+                    prediction”. Crop yield prediction is a difficult task in the field of agriculture and is crucial
+                    for decision-making at the local, regional, and global scales. These predictions rely on various
+                    factors such as climate, soil, environmental, and crop parameters. Decision support models are
+                    widely used in extracting important crop features for prediction. These extractions require the use
+                    of sensing technologies, variable rate technologies, management information systems, and responses
+                    to variations within and between cropping systems. Machine learning (ML) models were also used after
+                    processing agricultural data and Regression models were deployed to predict the yield.
                     <!-- <-- The developed models were then
-                    compared with each other to obtain the best performing model. --> 
-                </p> 
-                <p><a class="btn btn-primary btn-lg" href=" {{ url_for('mypredict') }}" role="button">predict &raquo;</a></p>
+                    compared with each other to obtain the best performing model. -->
+                </p>
+                <p><a class="btn btn-primary btn-lg" href=" {{ url_for('mypredict') }}" role="button">predict
+                        &raquo;</a></p>
             </div>
         </div>
 
@@ -97,10 +102,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>Dataset</h2>
-                    <p>The yield data with corresponding fertilizer usage and export quantity data obtained from the
-                        FAOSTAT database was combined with pertaining to the climatic conditions of each year, obtained
-                        from Climate Change Knowledge portal and 4 features, namely - Precipitation, Temperature (avg),
-                        Export Quantity, and Fertilizer Used were used to train the ML models.</p>
+                    <p>Fertilizer usage and export quantity data which is in correspondence with yield data was taken
+                        from kaggle database. It utilizes weather conditions and factors such as Temperature(avg),
+                        precitipation, Export Quantity, and Fertilizer Used were used to train the ML models.</p>
                     <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
                 </div>
                 <div class="col-md-6">
@@ -117,7 +121,7 @@
                         The analysis thus retrieved can be used as a basic prototype by the agricultural industry for
                         further research by using better data, advanced pre-processing techniques and machine learning
                         models.</p> -->
-                    <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+                        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
                 </div>
                 <!-- <div class="col-md-4">
                     <h2>Heading</h2>
