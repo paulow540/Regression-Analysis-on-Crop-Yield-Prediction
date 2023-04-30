@@ -1,4 +1,14 @@
 body {
     padding-top: 3.5rem;
   }
-  
+
+ 
+@media (max-width: 768px) {
+
+/* table{
+  width: 50px;
+}
+th{
+  width: 10px;
+} */
+}

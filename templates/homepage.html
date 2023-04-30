@@ -40,38 +40,7 @@
 
 <body>
 
-    <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav> -->
+
 
     <main role="main">
 
@@ -89,10 +58,12 @@
                     of sensing technologies, variable rate technologies, management information systems, and responses
                     to variations within and between cropping systems. Machine learning (ML) models were also used after
                     processing agricultural data and Regression models were deployed to predict the yield.
-                    <!-- <-- The developed models were then
-                    compared with each other to obtain the best performing model. -->
+
                 </p>
                 <p><a class="btn btn-primary btn-lg" href=" {{ url_for('mypredict') }}" role="button">predict
+                        &raquo;</a></p>
+
+                <p><a class="btn btn-primary btn-lg" href=" {{ url_for('visulisation') }}" role="button">visulisation
                         &raquo;</a></p>
             </div>
         </div>
@@ -105,36 +76,17 @@
                     <p>Fertilizer usage and export quantity data which is in correspondence with yield data was taken
                         from kaggle database. It utilizes weather conditions and factors such as Temperature(avg),
                         precitipation, Export Quantity, and Fertilizer Used were used to train the ML models.</p>
-                    <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+
                 </div>
                 <div class="col-md-6">
                     <h2>ML Model</h2>
                     <p>In order to predict the crop yield for each crop, regression models were deployed.
-                        <!-- the prediction of the dependent variable with the help of other independent variables. Keeping
-                        ‘Crop’ as the ground truth value along with the 4 feature columns, five regression models,
-                        namely - Multivariate Linear Regression, Shrinkage methods (Ridge and Lasso regression),
-                        k-nearest neighbors, Decision Tree and Artificial Neural Networks were trained.
 
-                        Against the optimum performance standards for this task, after observation and evaluation of the
-                        metrics of the regressors, Decision Tree regressor exhibited best performance.
-
-                        The analysis thus retrieved can be used as a basic prototype by the agricultural industry for
-                        further research by using better data, advanced pre-processing techniques and machine learning
-                        models.</p> -->
-                        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
                 </div>
-                <!-- <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Playing ping pong all night long, everything's all neon and hazy. Yeah, she's so in demand. She's
-                        sweet as pie but if you break her heart. But down to earth. It's time to face the music I'm no
-                        longer your muse. I guess that I forgot I had a choice.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                </div> -->
+
+                <hr>
+
             </div>
-
-            <hr>
-
-        </div> <!-- /container -->
 
     </main>
 
@@ -144,23 +96,25 @@
             High temperature considerably influences the crops by affecting several physiological injuries like leaf
             abscission, leaf scorching, senescence, and root and shoot growth limitation that subsequently leads to a
             reduction in yield. </p>
-        <p> <b>Precipitation:</b> It can be defined as earthward falling of water drops or ice particles that have formed by
+        <p> <b>Precipitation:</b> It can be defined as earthward falling of water drops or ice particles that have
+            formed by
             rapid condensation in the atmosphere.</p>
         <p> <b>Export Quantity:</b>
             Export crops means crops whose majority of production shall be for export outside the State or whose
             majority of the value-added products shall be exported. </p>
-        <p> <b>Fertilizer Usage:</b> Most fertilizers that are commonly used in agriculture contain the three basic plant
+        <p> <b>Fertilizer Usage:</b> Most fertilizers that are commonly used in agriculture contain the three basic
+            plant
             nutrients: nitrogen, phosphorus, and potassium. Some fertilizers also contain certain "micronutrients," such
             as zinc and other metals, that are necessary for plant growth.</p>
 
         <h2>Sample of the Dataset</h2>
-        <table class="table table-hover">
+        <table class="table table-hover table table-bordered">
             <thead>
                 <tr>
-                    <th>Temperature (Avg)</th>
-                    <th>Precipitation </th>
-                    <th>Export Quantity</th>
-                    <th>Fertilizer Usage</th>
+                    <th scope="col">Temperature (Avg)</th>
+                    <th scope="col">Precipitation </th>
+                    <th scope="col">Export Quantity</th>
+                    <th scope="col">Fertilizer Usage</th>
 
                 </tr>
             </thead>
@@ -192,9 +146,7 @@
 
 
 
-    <!-- <footer class="container">
-        <p>&copy; Company 2017-2022</p>
-    </footer> -->
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
