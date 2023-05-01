@@ -55,4 +55,4 @@ y_pred_dt = dt_regression.predict(X_test)
 compute_scores(y_test, y_pred_dt)
 
 pickle.dump(dt_regression, open("model.pkl","wb"))
-model = pickle.load(open("model.pkl", "rb"))
+
