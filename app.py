@@ -32,7 +32,7 @@ def home():
 # Crop_Bananas	
 # Crop_Rice	
 # Crop_Wheat
-@app.route("/predict")
+@app.route("/predict", methods = ["GET",'POST'])
 def mypredict():
     myTemperature = int(request.form.get("Temperature", False))
     myPrecipitation	= int(request.form.get("Precipitation", False))
