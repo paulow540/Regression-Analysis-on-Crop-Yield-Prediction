@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request,jsonify, url_for
 import os
 import pickle
-import plotly.express as px
+# import plotly.express as px
 import pandas as pd
 
 app = Flask(__name__)
