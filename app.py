@@ -23,15 +23,6 @@ def home():
 
 
 
-
-#  Temperature (Avg)	
-# Precipitation	
-# Export Quantity	
-# Fertilizer Usage	
-# Crop_Avocados	
-# Crop_Bananas	
-# Crop_Rice	
-# Crop_Wheat
 @app.route("/predict", methods = ["GET",'POST'])
 def mypredict():
     myTemperature = int(request.form.get("Temperature", False))
@@ -49,21 +40,6 @@ def mypredict():
     return render_template("predict.html", my_ourbeans=f"{prediction[0]}")
 
 
-@app.route('/visulisation')
-def visulisation():
-    df = pd.read_csv("Data/crop_yield_data.csv")
-    # Create your Plotly Express visualization
-    fig = px.bar(df, x='Year', y='Export Quantity')
-
-    # Convert the figure to JSON
-    graphJSON = fig.to_json()
-
-    fig2 = px.bar(df, x='Yield', y='Crop')
-    graphJSON2 = fig2.to_json()
-
-
-    # Render the HTML template with the graphJSON
-    return render_template('visulisation.html', graphJSON=graphJSON, graphJSON2=graphJSON2)
 
 if  __name__ == "__main__":
     app.run(debug=True)     
