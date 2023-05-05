@@ -38,11 +38,15 @@
 
 <body>
 
+  <!-- we are getting this images from the image folder in our static folder -->
+
   <div class="text-center mb-4">
     <img class="mb-2 mt-5" src="/static/images/cropy1.jpg" alt="" width="150" height="100">
     <h1 class="h3 mb-3 font-weight-normal">predict crop yield</h1>
     <!-- <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/css-placeholder-shown">Works in latest Chrome, Safari, Firefox, and IE 10/11 (prefixed).</a></p> -->
   </div>
+
+  <!--  this is the form where we supply all our parameter and send it back to app.py to return the predicted value -->
   <form action="/predict" method="POST" class="form-signin">
 
     <div class="form-label-group">
@@ -92,13 +96,14 @@
   </form>
 
   <p>
+    <!--  this code link back to our homepage.html from preiction page -->
     <a class="btn btn-primary btn-lg mt-5" href=" {{ url_for('home') }}" role="button">Home page &raquo;
 
     </a>
   </p>
 
 
-
+<!--  this is where the predicted values we show -->
   <p>
     The yield for Precipitation, Temperature (avg), Export Quantity, and Fertilizer Used is {{ my_ourbeans }}
   </p>

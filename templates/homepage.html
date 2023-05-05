@@ -42,6 +42,7 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
+                <!-- this is explaining about the project -->
                 <h3 class="display-5">Crop-Yield-Prediction</h3>
                 <p>This project is established towards the fulfilment of my masters degree at the university of
                     Sunderland on a course titled data science product development(CETM46). It is an agricultural data
@@ -55,8 +56,10 @@
                     processing agricultural data and Regression models were deployed to predict the yield.
 
                 </p>
+                <!-- this code link to predict.html page  -->
                 <p><a class="btn btn-primary btn-lg" href=" {{ url_for('mypredict') }}" role="button">predict
                         &raquo;</a></p>
+                <!-- this code link to visulisation.html page when we get the function for the app.py file  -->
 
                         <p><a class="btn btn-primary btn-lg" href=" {{ url_for('visulisation') }}" role="button">visulisation
                             &raquo;</a></p>
@@ -106,6 +109,7 @@
         <h2>Sample of the Dataset</h2>
         <table class="table table-hover table table-bordered">
             <thead>
+                <!-- this table is just explaining about the samples of parameters to supply inside our form -->
                 <tr>
                     <th scope="col">Temperature (Avg)</th>
                     <th scope="col">Precipitation </th>

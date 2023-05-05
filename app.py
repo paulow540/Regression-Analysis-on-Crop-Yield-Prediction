@@ -6,13 +6,18 @@ import numpy as np
 import plotly_express as px 
 
 
-
+#this is the code that locate where our image files are 
 picfolder = os.path.join("static","images")
 
+#we are initialing the Flask app
 app = Flask(__name__)
+
+# this is the code that open the model.pkl file where we save our predict values and model
 model = pickle.load(open("model.pkl", "rb"))
 app.config["UPLOAD_FOLDER"] = picfolder
 
+
+#this code link to homepage in our templates folder
 @app.route("/")
 def home():
 
@@ -23,6 +28,7 @@ def home():
 
 
 
+#this code link to visulisation.html page in our templates folder
 
 @app.route('/visulisation')
 def visulisation():
@@ -40,13 +46,20 @@ def visulisation():
     # Render the HTML template with the graphJSON
     return render_template('visulisation.html', graphJSON=graphJSON, graphJSON2=graphJSON2)
 
+
+#this code link to predict.html page  in our templates folder
+# this is the same code that takes input values from the frontend and return the predict values
+#in the predict.html page
+
+#we try to convert all the values to float because the parameter are float in data type and int as well
+
 @app.route("/predict", methods = ['GET','POST'])
 def mypredict():
     if request.method == 'POST':
-        myTemperature = int(request.form.get("Temperature", False))
-        myPrecipitation	= int(request.form.get("Precipitation", False))
-        myExport	= int(request.form.get("Export", False))
-        myFertilizer = int(request.form.get("Fertilizer", False))	
+        myTemperature = float(request.form.get("Temperature", False))
+        myPrecipitation	= float(request.form.get("Precipitation", False))
+        myExport	= float(request.form.get("Export", False))
+        myFertilizer = float(request.form.get("Fertilizer", False))	
         myAvocados = int(request.form.get("Crop_Avocados", False))	
         myBananas = int(request.form.get("Crop_Bananas", False))	
         myRice	 = int(request.form.get("Crop_Rice", False)) 	
@@ -66,6 +79,7 @@ def mypredict():
         return render_template("predict.html", my_ourbeans=f" ")
          
          
+
 
 
 if  __name__ == "__main__":
